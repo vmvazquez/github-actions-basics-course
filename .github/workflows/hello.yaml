@@ -1,10 +1,12 @@
-name: example
+name: Hello World
 
-on: push
+on:
+  workflow_dispatch:
 
 jobs:
-  job_1:
+  print-hello-world_1:
     runs-on: ubuntu-latest
+
     steps:
-      - name: My first step
-        run: echo This is the first step of my first job.
+      - name: Say hello
+        run: echo "Hello World"
